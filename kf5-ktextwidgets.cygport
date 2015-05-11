@@ -1,0 +1,25 @@
+inherit kf5
+
+NAME="kf5-ktextwidgets"
+VERSION=5.10.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 desktop textwidgets library"
+DESCRIPTION="KNotification is used to notify the user of an event. It covers
+feedback and persistent events."
+
+PKG_NAMES="libKF5TextWidgets5 libKF5TextWidgets-devel"
+libKF5TextWidgets5_CONTENTS="
+	usr/bin/cygKF5TextWidgets-5.dll
+	usr/share/doc/
+	usr/share/kservicetypes5/
+	usr/share/locale/
+"
+libKF5TextWidgets_devel_REQUIRES="libKF5Completion-devel libKF5ConfigWidgets-devel libKF5I18n-devel libKF5IconThemes-devel libKF5Service-devel libKF5Sonnet-devel libKF5WindowSystem-devel libQt5Core-devel libQt5Gui-devel"
+libKF5TextWidgets_devel_CONTENTS="
+	usr/include/KF5/KTextWidgets/
+	usr/include/KF5/ktextwidgets_version.h
+	usr/lib/cmake/KF5TextWidgets/
+	${QT5_MKSPECSDIR#/}/modules/qt_KTextWidgets.pri
+	usr/lib/libKF5TextWidgets.dll.a
+"
